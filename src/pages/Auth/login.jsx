@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
+import logo from '../../assets/Logo-IFRS-cores-sem-fundo-Vertical.png'
+import './Auth.css'
 
 // inicio do mock
 const MOCK_USERS = [
@@ -35,6 +37,7 @@ export default function Login() {
 
   return (
     <div className="auth-container">
+      <img src={logo} alt="Logo IFRS" className="auth-logo" />
       <h1>Login</h1>
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
